@@ -9,5 +9,7 @@ form.addEventListener("submit", (e) => {
         confirm_password.classList.add("password_error");
     } else {
         form.submit()
+        password.classList.remove("password_error");
+        confirm_password.classList.remove("password_error");
     }
 })
