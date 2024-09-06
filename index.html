@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign-up form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <div class="main flex">
+            <div class="image-sidebar flex">
+                <div class="logo">
+                    LOGO
+                </div>
+                <p>
+                    Photo by <a href="https://unsplash.com/@eadesstudio">James Eades</a> on <a href="https://unsplash.com/photos/ice-berg-QCrDUYKGbp4">Unsplash</a>
+                </p>
+            </div>
+            <div class="content flex">
+                <div>
+                    <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                    <p>Sign up <em>now</em> to get started.</p>
+                    <p>You <em>know</em> you want to.</p>
+                </div>
+                <form action="https://httpbin.org/post" method="post">
+                    <p>Let's do this!</p>
+                    <div class="input flex">
+                        <div>
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" name="first_name" id="first_name" required />
+                        </div>
+                        <div>
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" name="last_name" id="last_name" required />
+                        </div>
+                        <div>
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email" required />
+                        </div>
+                        <div>
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" name="phone" id="phone" required />
+                        </div>
+                        <div>
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password" required />
+                        </div>
+                        <div>
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirm_password" id="confirm_password" required />
+                        </div>
+                    </div>
+                    <button type="submit">Create Account</button>
+                </form>
+                <p>Already have an account? <a href="./login.html" id="login">Log in</a></p>
+            </div>
+        </div>
+    </body>
+</html>

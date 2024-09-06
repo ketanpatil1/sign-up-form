@@ -1,0 +1,157 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    font-family: sans-serif;
+}
+
+:root {
+    --accent-color: rgba(120, 160, 210, 1);
+}
+
+.main {
+    height: 100vh;
+    justify-content: start;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.image-sidebar {
+    background-image: url("../images/james-eades-QCrDUYKGbp4-unsplash.jpg");
+    background-size: cover;
+    background-position: left;
+    width: inherit;
+    min-width: 300px;
+    flex: 1 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+
+    p {
+        margin-bottom: 16px;
+    }
+}
+
+.logo {
+    background-color: rgba(55, 55, 55, 0.5);
+    margin-top: 50%;
+    font-size: 64px;
+}
+
+.content {
+    padding: 48px;
+    justify-content: center;
+    align-items: stretch;
+    flex: 2 0;
+    flex-direction: column;
+    gap: 64px;
+
+    > div {
+        margin-right: 30%;
+
+        > p:last-child {
+            margin-top: 16px;
+        }
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    > p:last-child {
+        font-size: 16px;
+    }
+}
+
+.input {
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    div {
+        display: inline-block;
+        width: 40%;
+        min-width: 250px;
+        padding: 16px 0;
+        
+        label {
+            display: block;
+            color: rgb(100, 100, 100);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+input {
+    display: block;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 4px;
+    height: 32px;
+    width: 75%;
+    padding: 8px;
+}
+
+input:hover {
+    border-color: rgb(150, 150, 150);
+    box-shadow: 2px 2px 5px rgb(180, 180, 180);
+}
+
+input:focus {
+    border-color: var(--accent-color);
+    border-width: 2px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+/* input:valid { */
+/*     border-color: green; */
+/* } */
+
+input:user-invalid {
+    border-color: red;
+}
+
+div:has(> .password_error) {
+    ::after {
+        content: "* Passwords do not match";
+        color: red;
+        font-size: 12px;
+    }
+
+    input {
+        border-color: red;
+    }
+}
+
+/* input.password_error { */
+/*     border-color: red; */
+/* } */
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+a:link {
+    color: inherit;
+}
+
+#login {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
