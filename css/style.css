@@ -29,10 +29,9 @@
     justify-content: space-between;
     align-items: stretch;
     text-align: center;
-
-    p {
-        margin-bottom: 16px;
-    }
+}
+.image-sidebar p {
+    margin-bottom: 16px;
 }
 
 .logo {
@@ -48,22 +47,18 @@
     flex: 2 0;
     flex-direction: column;
     gap: 64px;
-
-    > div {
-        margin-right: 30%;
-
-        > p:last-child {
-            margin-top: 16px;
-        }
-    }
-
-    p {
-        font-size: 24px;
-    }
-
-    > p:last-child {
-        font-size: 16px;
-    }
+}
+.content > div {
+    margin-right: 30%;
+}
+.content > div > p:last-child {
+    margin-top: 16px;
+}
+.content p {
+    font-size: 24px;
+}
+.content > p:last-child {
+    font-size: 16px;
 }
 
 .input {
@@ -71,20 +66,18 @@
     align-content: center;
     flex-wrap: wrap;
     gap: 16px;
-
-    div {
-        display: inline-block;
-        width: 40%;
-        min-width: 250px;
-        padding: 16px 0;
-        
-        label {
-            display: block;
-            color: rgb(100, 100, 100);
-            font-size: 14px;
-            margin-bottom: 4px;
-        }
-    }
+}
+.input div {
+    display: inline-block;
+    width: 40%;
+    min-width: 250px;
+    padding: 16px 0;
+}
+.input div label {
+    display: block;
+    color: rgb(100, 100, 100);
+    font-size: 14px;
+    margin-bottom: 4px;
 }
 
 .flex {
@@ -119,16 +112,13 @@ input:user-invalid {
     border-color: red;
 }
 
-div:has(> .password_error) {
-    ::after {
-        content: "* Passwords do not match";
-        color: red;
-        font-size: 12px;
-    }
-
-    input {
-        border-color: red;
-    }
+div:has(> .password_error) ::after {
+    content: "* Passwords do not match";
+    color: red;
+    font-size: 12px;
+}
+div:has(> .password_error) input {
+    border-color: red;
 }
 
 /* input.password_error { */
