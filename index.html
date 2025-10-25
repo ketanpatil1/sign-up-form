@@ -8,34 +8,32 @@
         <script src="./script.js" defer></script>
     </head>
     <body>
-        <div class="main flex">
-            <div class="content flex">
+        <div class="main">
+            <div>
                 <div>
                     <h1>Embrace the Unknown</h1>
                     <p class="subtitle">The journey starts when you do.</p>
                 </div>
                 <form action="https://httpbin.org/post" method="post">
-                    <div class="input flex">
-                        <div>
-                            <label for="name">NAME</label>
-                            <input type="text" name="name" id="name" required />
-                        </div>
-                        <div>
-                            <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email" required />
-                        </div>
-                        <div>
-                            <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" name="phone" id="phone" pattern="^\+?[1-9]\d{1,14}$" required />
-                        </div>
-                        <div>
-                            <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password" required />
-                        </div>
-                        <div>
-                            <label for="confirm_password">CONFIRM PASSWORD</label>
-                            <input type="password" name="confirm_password" id="confirm_password" required />
-                        </div>
+                    <div>
+                        <label for="name">NAME</label>
+                        <input type="text" name="name" id="name" required />
+                    </div>
+                    <div>
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                    <div>
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" name="phone" id="phone" pattern="^\+?[1-9]\d{1,14}$" required />
+                    </div>
+                    <div>
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password" required />
+                    </div>
+                    <div>
+                        <label for="confirm_password">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirm_password" id="confirm_password" required />
                     </div>
                     <button type="submit">Begin the Passage</button>
                 </form>

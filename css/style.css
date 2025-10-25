@@ -8,83 +8,11 @@
 }
 
 :root {
-    --accent-color: rgba(120, 160, 210, 1);
 }
 
 .main {
     height: 100vh;
-    justify-content: start;
-    align-items: stretch;
-    flex-wrap: wrap;
 }
-
-.content {
-    padding: 48px;
-    justify-content: center;
-    align-items: stretch;
-    flex: 2 0;
-    flex-direction: column;
-    gap: 64px;
-}
-.content > div {
-    margin-right: 30%;
-}
-.content > div > p:last-child {
-    margin-top: 16px;
-}
-.content p {
-    font-size: 24px;
-}
-.content > p:last-child {
-    font-size: 16px;
-}
-
-.input {
-    justify-content: flex-start;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-.input div {
-    display: inline-block;
-    width: 40%;
-    min-width: 250px;
-    padding: 16px 0;
-}
-.input div label {
-    display: block;
-    color: rgb(100, 100, 100);
-    font-size: 14px;
-    margin-bottom: 4px;
-}
-
-.flex {
-    display: flex;
-}
-
-input {
-    display: block;
-    border: 1px solid rgb(196, 196, 196);
-    border-radius: 4px;
-    height: 32px;
-    width: 75%;
-    padding: 8px;
-}
-
-input:hover {
-    border-color: rgb(150, 150, 150);
-    box-shadow: 2px 2px 5px rgb(180, 180, 180);
-}
-
-input:focus {
-    border-color: var(--accent-color);
-    border-width: 2px;
-    box-shadow: 2px 2px 5px gray;
-}
-
-/* input:valid { */
-/*     border-color: green; */
-/* } */
 
 input:user-invalid {
     border-color: red;
@@ -93,31 +21,9 @@ input:user-invalid {
 div:has(> .password_error) ::after {
     content: "* Passwords do not match";
     color: red;
-    font-size: 12px;
 }
 div:has(> .password_error) input {
     border-color: red;
-}
-
-/* input.password_error { */
-/*     border-color: red; */
-/* } */
-
-button {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 10px;
-}
-
-a:link {
-    color: inherit;
-}
-
-#login {
-    color: var(--accent-color);
-    text-decoration: none;
 }
 
 a:hover {
