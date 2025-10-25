@@ -8,6 +8,22 @@
 }
 
 :root {
+    color-scheme: light dark;
+
+    --fg-color: black;
+    --bg-color: white;
+    --error-color: red;
+}
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --fg-color: white;
+        --bg-color: black;
+    }
+}
+
+body {
+    color: var(--fg-color);
+    background-color: var(--bg-color);
 }
 
 .main {
@@ -15,17 +31,25 @@
 }
 
 input:user-invalid {
-    border-color: red;
+    border-color: var(--error-color);
 }
 
 div:has(> .password_error) ::after {
     content: "* Passwords do not match";
-    color: red;
+    color: var(--error-color);
 }
 div:has(> .password_error) input {
-    border-color: red;
+    border-color: var(--error-color);
 }
 
+button {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+}
+
+a {
+    color: var(--fg-color);
+}
 a:hover {
     text-decoration: none;
 }
