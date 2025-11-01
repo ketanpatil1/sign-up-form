@@ -14,11 +14,38 @@
     --fg-color: black;
     --bg-color: white;
     --error-color: red;
+
+    --main-width: 35%;
+    --gradient-offset: var(--main-width);
+
+    --direction: to right;
+    --bg-pos-start: right;
+    --bg-pos-end: left;
 }
 @media screen and (prefers-color-scheme: dark) {
     :root {
         --fg-color: white;
         --bg-color: black;
+    }
+}
+@media screen and (max-width: 1400px) {
+    :root {
+        --main-width: 40%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    :root {
+        --main-width: 50%;
+    }
+}
+@media screen and (max-width: 700px) {
+    :root {
+        --main-width: 100%;
+        --gradient-offset: 70vh;
+
+        --direction: to top;
+        --bg-pos-start: top;
+        --bg-pos-end: bottom;
     }
 }
 
@@ -28,7 +55,7 @@ body {
     min-height: 100svh;
     width: 100vw;
 
-    background-image: linear-gradient(to right, var(--bg-color) 30%, transparent),
+    background-image: linear-gradient(var(--direction), var(--bg-color) var(--gradient-offset), transparent),
         url('../images/background-light.svg');
     background-size: 100% 100%, 10vmax;
     background-repeat: no-repeat, repeat;
@@ -36,29 +63,17 @@ body {
 }
 @media screen and (prefers-color-scheme: dark) {
     body {
-        background-image: linear-gradient(to right, var(--bg-color) 30%, transparent),
+        background-image: linear-gradient(var(--direction), var(--bg-color) var(--gradient-offset), transparent),
             url('../images/background-dark.svg');
     }
 }
 @keyframes bgMove {
     0% {
-        background-position: right;
+        background-position: var(--bg-pos-start);
     }
     100% {
-        background-position: left;
+        background-position: var(--bg-pos-end);
     }
-}
-
-.main {
-    width: 30%;
-    min-height: 100svh;
-    padding: 5%;
-
-    gap: 1.5em;
-}
-
-h1 {
-    margin-bottom: .25em;
 }
 
 .main,
@@ -73,6 +88,31 @@ form {
 }
 form > div {
     gap: .5em;
+}
+
+
+.main {
+    width: var(--main-width);
+    min-height: 100svh;
+    padding: 5%;
+
+    gap: 1.5em;
+}
+@media screen and (max-width: 700px) {
+    .main {
+        padding: 10%;
+        padding-top: calc(100vh - var(--gradient-offset) - 10vh);
+        justify-content: flex-start;
+    }
+}
+.main > * {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    margin-bottom: .25em;
 }
 
 input:user-invalid {
