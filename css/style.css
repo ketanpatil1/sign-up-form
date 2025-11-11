@@ -84,9 +84,6 @@ form > div {
     justify-content: center;
 }
 form {
-    gap: 1.25em;
-}
-form > div {
     gap: .5em;
 }
 
@@ -115,8 +112,36 @@ h1 {
     margin-bottom: .25em;
 }
 
+label {
+    margin-bottom: 0.3em;
+    transform: scale(0.7);
+    transform-origin: 0% 100%;
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+}
+label:has(+ input:placeholder-shown) {
+    background: transparent;
+    transform: translateX(.6em) translateY(2em);
+    opacity: 0.5;
+}
+
+input {
+    background: #f0f0f0;
+    padding: .7em;
+    outline: 2px solid var(--bg-color);
+    transition-property: outline-color;
+    transition-duration: 300ms;
+}
+@media screen and (prefers-color-scheme: dark) {
+    input {
+        background: #272727;
+    }
+}
+input:focus {
+    outline-color: var(--fg-color);
+}
 input:user-invalid {
-    border-color: var(--error-color);
+    outline-color: var(--error-color);
 }
 
 div:has(> .password_error) ::after {
