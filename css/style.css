@@ -1,10 +1,12 @@
+@import url(https://fonts.bunny.net/css?family=tektur:500);
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
     border: 0;
     padding: 0;
     outline: 0;
-    font-family: sans-serif;
+    font-family: 'Tektur', serif;
 }
 
 :root {
