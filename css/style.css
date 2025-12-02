@@ -53,6 +53,11 @@
     }
 }
 
+::selection {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+}
+
 body {
     color: var(--fg-color);
     background-color: var(--bg-color);
