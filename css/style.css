@@ -127,6 +127,7 @@ label:has(+ input:placeholder-shown) {
     background: transparent;
     transform: translateX(.6em) translateY(2.2em);
     opacity: 0.5;
+    cursor: text;
 }
 
 input {
