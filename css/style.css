@@ -48,6 +48,8 @@
         --direction: to top;
         --bg-pos-start: top;
         --bg-pos-end: bottom;
+
+        font-size: 1rem;
     }
 }
 
@@ -95,7 +97,7 @@ form {
     min-height: 100svh;
     padding: 5%;
 
-    gap: 1.5em;
+    gap: 1em;
 }
 @media screen and (max-width: 700px) {
     .main {
@@ -116,23 +118,24 @@ h1 {
 
 label {
     margin-bottom: 0.3em;
-    transform: scale(0.7);
+    transform: scale(0.85);
     transform-origin: 0% 100%;
     transition-property: transform, opacity;
     transition-duration: 300ms;
 }
 label:has(+ input:placeholder-shown) {
     background: transparent;
-    transform: translateX(.6em) translateY(2em);
+    transform: translateX(.6em) translateY(2.2em);
     opacity: 0.5;
 }
 
 input {
     background: #f0f0f0;
-    padding: .7em;
+    padding: .6em;
     outline: 2px solid var(--bg-color);
     transition-property: outline-color;
     transition-duration: 300ms;
+    font-size: inherit;
 }
 @media screen and (prefers-color-scheme: dark) {
     input {
@@ -157,7 +160,9 @@ div:has(> .password_error) input {
 button {
     background-color: var(--fg-color);
     color: var(--bg-color);
-    margin-top: 1em;
+    margin-top: 2em;
+    padding: .5em;
+    font-size: inherit;
 }
 
 a {
