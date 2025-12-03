@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Log-in form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <div>
+                <h1>Return to the Known</h1>
+                <p class="subtitle">Your path continues where you left it.</p>
+            </div>
+            <form action="https://httpbin.org/post" method="post">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder=" " required />
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder=" " required />
+                </div>
+                <button type="submit">Re-enter the Passage</button>
+            </form>
+            <p>New to the journey? <a href="./index.html" id="signup">Begin anew</a></p>
+        </div>
+    </body>
+</html>
