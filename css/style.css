@@ -186,7 +186,24 @@ button:focus {
 
 a {
     color: var(--fg-color);
+    text-decoration: none;
+    transition: color 300ms;
+    position: relative;
+}
+a::after {
+    content: '';
+    width: 108%;
+    position: absolute;
+    left: -4%;
+    bottom: 0px;
+    height: .1em;
+    background: var(--fg-color);
+    z-index: -1;
+    transition: height 300ms;
 }
 a:hover {
-    text-decoration: none;
+    color: var(--bg-color);
+}
+a:hover::after {
+    height: 1.1em;
 }
