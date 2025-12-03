@@ -139,7 +139,7 @@ input {
     background: #f0f0f0;
     padding: .6em;
     outline: 2px solid var(--bg-color);
-    transition-property: outline-color;
+    transition-property: outline-color, background-color;
     transition-duration: 300ms;
     font-size: inherit;
 }
@@ -148,6 +148,10 @@ input {
         background: #272727;
     }
 }
+input:hover {
+    background-color: color-mix(in srgb, var(--bg-color) 80%, var(--fg-color));
+}
+input:hover,
 input:focus {
     outline-color: var(--fg-color);
 }
@@ -169,6 +173,15 @@ button {
     margin-top: 2em;
     padding: .5em;
     font-size: inherit;
+    outline: 3px solid var(--bg-color);
+    transition-property: background-color, color, outline-color;
+    transition-duration: 300ms;
+}
+button:hover,
+button:focus {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    outline-color: var(--fg-color);
 }
 
 a {
