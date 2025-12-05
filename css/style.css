@@ -24,6 +24,10 @@
     --bg-pos-start: right;
     --bg-pos-end: left;
 }
+:root.login {
+    --bg-pos-start: left;
+    --bg-pos-end: right;
+}
 @media screen and (prefers-color-scheme: dark) {
     :root {
         --fg-color: white;
@@ -50,6 +54,10 @@
         --bg-pos-end: bottom;
 
         font-size: 1rem;
+    }
+    :root.login {
+        --bg-pos-start: bottom;
+        --bg-pos-end: top;
     }
 }
 
