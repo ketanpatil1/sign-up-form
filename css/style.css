@@ -74,7 +74,7 @@ body {
 
     background-image: linear-gradient(var(--direction), var(--bg-color) var(--gradient-offset), transparent),
         url('../images/background-light.svg');
-    background-size: 100% 100%, 10vmax;
+    background-size: 100% 100%, 10svmax;
     background-repeat: no-repeat, repeat;
     animation: bgMove 30s linear infinite;
 }
