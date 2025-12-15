@@ -207,9 +207,11 @@ a::after {
     z-index: -1;
     transition: height 300ms;
 }
-a:hover {
+a:hover,
+a:focus {
     color: var(--bg-color);
 }
-a:hover::after {
+a:hover::after,
+a:focus::after {
     height: 1.1em;
 }
