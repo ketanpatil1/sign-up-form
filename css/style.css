@@ -47,7 +47,7 @@
 @media screen and (max-width: 700px) {
     :root {
         --main-width: 100%;
-        --gradient-offset: 70vh;
+        --gradient-offset: 76vh;
 
         --direction: to top;
         --bg-pos-start: top;
