@@ -142,7 +142,7 @@ label:has(+ input:placeholder-shown) {
 }
 
 input {
-    background: #f0f0f0;
+    background: #eaeaea;
     padding: .6em;
     outline: 2px solid var(--bg-color);
     transition-property: outline-color, background-color;
