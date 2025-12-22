@@ -53,11 +53,15 @@
         --bg-pos-start: top;
         --bg-pos-end: bottom;
 
-        font-size: 1rem;
+        font-size: .90rem;
     }
     :root.login {
         --bg-pos-start: bottom;
         --bg-pos-end: top;
+    }
+
+    h1 {
+        font-size: 2.125em;
     }
 }
 
