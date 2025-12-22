@@ -129,6 +129,11 @@ h1 {
     margin-bottom: .25em;
 }
 
+.subtitle,
+label {
+    color: color-mix(in srgb, var(--fg-color) 75%, var(--bg-color));
+}
+
 label {
     margin-top: 0.5em;
     margin-bottom: 0.3em;
